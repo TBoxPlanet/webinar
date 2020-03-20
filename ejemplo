@@ -1,0 +1,87 @@
+colors = ['teal','midnight','red']
+fill ('menu')
+b = stamp('button2forestgreen')
+song('brothers')
+car1 = stamp('bananas2',150,300,100)
+car2 = stamp('bread4',670,300,100)
+
+pro1 = stamp('salmon',150,470,100)
+pro2 = stamp('egg3',670,470,60)
+
+gras1 = stamp('burger2',150,650,100)
+gras2 = stamp('burrito',670,650,100)
+
+pla1 = stamp('plate2',150,850,150)
+pla2 = stamp('plate2',420,850,150)
+pla3 = stamp('plate2',670,850,150)
+
+indi = text ('Presionar los alimentos',220,450,35,'yellow','Delius')
+indi1 = text (' para ver su clasificación.',220,500,35,'yellow','Delius')
+carbo = text ('Carbohidratos',20,970,'yellow','Delius')
+prote = text ('Proteínas',340,970,'yellow','Delius')
+gras = text ('Grasas',610,970,'yellow','Delius')
+
+line (5)
+t = text('Iniciar', 270, 530,80,'yellow','Delius')
+indi.hide()
+indi1.hide()
+pla1.hide()
+pla2.hide()
+pla3.hide()
+carbo.hide()
+prote.hide()
+gras.hide()
+car1.hide()
+car2.hide()
+pro1.hide()
+pro2.hide()
+gras1.hide()
+gras2.hide()
+function touch() {   
+  b.hide()
+  t.hide()
+  indi.show()
+  indi1.show()
+  pla1.show()  
+  pla2.show()
+  pla3.show()
+  carbo.show()
+  prote.show()
+  gras.show()
+  car1.show()
+  car2.show()
+  pro1.show()
+  pro2.show()
+  gras1.show()
+  gras2.show()
+}
+car1.tap = function () {
+  sound('block')
+  car1.move(150,850)
+  car1.front()
+}
+car2.tap = function () {
+  sound('block')
+  car2.move(150,850)
+  car2.front()
+}
+pro1.tap = function () {
+  sound('block')
+  pro1.move(420,850)
+  pro1.front()
+}
+pro2.tap = function () {
+  sound('block')
+  pro2.move(420,850)
+  pro2.front()
+}
+gras1.tap = function () {
+  sound('block')
+  gras1.move(670,850)
+  gras1.front()
+}
+gras2.tap = function () {
+  sound('block')
+  gras2.move(670,850)
+  gras2.front()
+}
