@@ -1,4 +1,3 @@
-colors = ['teal','midnight','red']
 fill ('menu')
 b = stamp('button2forestgreen')
 song('brothers')
