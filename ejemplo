@@ -1,6 +1,10 @@
+//Aplica la imagen de fondo
 fill ('menu')
+//Agrega el botón, texto y la canción de fondo
 b = stamp('button2forestgreen')
+t = text('Iniciar', 270, 530,80,'yellow','Delius')
 song('brothers')
+//Alimentos
 car1 = stamp('bananas2',150,300,100)
 car2 = stamp('bread4',670,300,100)
 
@@ -9,19 +13,17 @@ pro2 = stamp('egg3',670,470,60)
 
 gras1 = stamp('burger2',150,650,100)
 gras2 = stamp('burrito',670,650,100)
-
+//Platos
 pla1 = stamp('plate2',150,850,150)
 pla2 = stamp('plate2',420,850,150)
 pla3 = stamp('plate2',670,850,150)
-
+//Texto principal y texto debajo de los platos
 indi = text ('Presionar los alimentos',220,450,35,'yellow','Delius')
 indi1 = text (' para ver su clasificación.',220,500,35,'yellow','Delius')
 carbo = text ('Carbohidratos',20,970,'yellow','Delius')
 prote = text ('Proteínas',340,970,'yellow','Delius')
 gras = text ('Grasas',610,970,'yellow','Delius')
-
-line (5)
-t = text('Iniciar', 270, 530,80,'yellow','Delius')
+//Objetos con atributo de oculto
 indi.hide()
 indi1.hide()
 pla1.hide()
@@ -36,6 +38,7 @@ pro1.hide()
 pro2.hide()
 gras1.hide()
 gras2.hide()
+//Función que permite mostrar los objetos al precionar el botón
 function touch() {   
   b.hide()
   t.hide()
@@ -54,6 +57,7 @@ function touch() {
   gras1.show()
   gras2.show()
 }
+//Función para presionar los objetos se muevan al plato
 car1.tap = function () {
   sound('block')
   car1.move(150,850)
@@ -64,6 +68,7 @@ car2.tap = function () {
   car2.move(150,850)
   car2.front()
 }
+
 pro1.tap = function () {
   sound('block')
   pro1.move(420,850)
@@ -74,6 +79,7 @@ pro2.tap = function () {
   pro2.move(420,850)
   pro2.front()
 }
+
 gras1.tap = function () {
   sound('block')
   gras1.move(670,850)
